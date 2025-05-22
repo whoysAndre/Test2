@@ -25,11 +25,16 @@ public class UsuariosJpaController implements Serializable {
     public UsuariosJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
+    
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_Test2_war_1.0-SNAPSHOTPU");
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
+
+    public UsuariosJpaController() {
+    }
+    
 
     public void create(Usuarios usuarios) {
         EntityManager em = null;
@@ -135,4 +140,28 @@ public class UsuariosJpaController implements Serializable {
         }
     }
     
+    
+    public Usuarios validar(Usuarios u){
+        EntityManager em =getEntityManager();
+        try {
+            Query query=em.createNamedQuery("Usuarios.validar");
+            query.setParameter("logiUsua", u.getLogiUsua());
+            query.setParameter("logiPass", u.getLogiPass());
+            u=(Usuarios)query.getSingleResult();
+            return u;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+    
+    public static void main(String[] args) {
+       UsuariosJpaController usuDao = new UsuariosJpaController();
+       Usuarios usu= usuDao.validar(new Usuarios("Kike","1234" ));
+       
+       if(usu!=null){
+           System.out.println("Correcto");
+       }else{
+           System.out.println("Incorrecto");
+       }
+    }
 }
