@@ -1,15 +1,134 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página Principal Pulenta</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f4037, #99f2c8);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+      color: #d4f8d4cc;
+      font-style: italic;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1f4037;
+      background-color: #d4f8d4;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(212, 248, 212, 0.4);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #a3e8a3;
+      box-shadow: 0 15px 20px rgba(163, 232, 163, 0.6);
+      transform: translateY(-3px);
+    }
+
+    main {
+      max-width: 900px;
+      background: rgba(255,255,255,0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    }
+
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    main p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #e0f7e0cc;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #c8e6c9cc;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      main {
+        padding: 1.5rem;
+      }
+      .btn-primary {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Impacto Verde</h1>
+    <p>Innovando para un futuro sostenible</p>
+  </header>
+
+  <main>
+    <h2>Bienvenido a Impacto Verde</h2>
+    <p>
+      Somos una startup dedicada a crear soluciones tecnológicas eco-amigables que ayudan a
+      proteger nuestro planeta. Nuestra misión es inspirar y empoderar a personas y empresas para
+      que adopten prácticas sostenibles usando innovación y diseño.
+    </p>
+    <p>
+      Explora nuestros proyectos, conoce nuestro equipo y descubre cómo juntos podemos
+      marcar la diferencia en el mundo.
+    </p>
+    <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+  </main>
+
+  <footer>
+    &copy; 2025 Impacto Verde. Todos los derechos reservados.
+  </footer>
+
+</body>
 </html>

@@ -154,14 +154,31 @@ public class UsuariosJpaController implements Serializable {
         }
     }
     
+    public boolean existeUsuario(String logiUsua) {
+    EntityManager em = getEntityManager();
+    try {
+        Query query = em.createNamedQuery("Usuarios.findByLogiUsua");
+        query.setParameter("logiUsua", logiUsua);
+        List<Usuarios> resultado = query.getResultList();
+        
+        return !resultado.isEmpty();
+    } finally {
+     
+        em.close();
+    }
+}
+
+    
     public static void main(String[] args) {
+        
        UsuariosJpaController usuDao = new UsuariosJpaController();
        Usuarios usu= usuDao.validar(new Usuarios("Kike","1234" ));
        
        if(usu!=null){
-           System.out.println("Correc");
+           System.out.println("Corre");
        }else{
            System.out.println("Incorrecto");
        }
     }
+
 }
