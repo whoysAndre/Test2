@@ -159,7 +159,7 @@ public class UsuariosJpaController implements Serializable {
        Usuarios usu= usuDao.validar(new Usuarios("Kike","1234" ));
        
        if(usu!=null){
-           System.out.println("Correcto");
+           System.out.println("Correc");
        }else{
            System.out.println("Incorrecto");
        }
