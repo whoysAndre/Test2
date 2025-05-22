@@ -30,7 +30,7 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
 
         // Obtiene los datos desde el formulario
-        String usuario = request.getParameter("usuario"); // Debe ser el name="usuario" en tu HTML
+        String usuario = request.getParameter("usuario"); // Debe ser el name="usuario" en tu Html
         String clave = request.getParameter("clave");     // Debe ser el name="clave" en tu HTML
 
         // Crea una instancia del DTO con los datos recibidos
